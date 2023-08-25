@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useCart } from '../../context';
-import { Link } from 'react-router-dom';
 import { Rating } from './Rating';
+import { Link } from 'react-router-dom';
+
 export const ProductCard = ({ product }) => {
     const { cartList, addToCart, removeFromCart } = useCart();
     const [inCart, setInCart] = useState(false);
