@@ -20,6 +20,7 @@ export const Register = () => {
             data.accessToken ? navigate("/products") : toast.error(data);
         } catch (error) {
             toast.error(error.message, { closeButton: true, position: "bottom-center" });
+
         }
     }
 

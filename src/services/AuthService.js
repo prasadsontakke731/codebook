@@ -25,9 +25,9 @@ export async function register(authDetail) {
         body: JSON.stringify(authDetail)
     }
     const response = await fetch(`${process.env.REACT_APP_HOST}/register`, requestOptions);
-    if (!response.ok) {
-        throw { message: response.statusText, status: response.status }; //eslint-disable-line
-    }
+    // if (!response.ok) {
+    //     throw { message: response.statusText, status: response.status };
+    // }
     const data = await response.json();
 
     if (data.accessToken) {
